@@ -17,3 +17,7 @@
   color: var(--btnTextColor);
   width: 90px;
 }
+.hline{
+  margin-left: 10%;
+  margin-right: 10%;
+}

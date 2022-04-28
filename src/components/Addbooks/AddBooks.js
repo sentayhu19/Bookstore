@@ -3,6 +3,7 @@ import './AddBooks.css';
 
 const AddBooks = () => (
   <>
+    <hr className="hline" />
     <div className="form-wrap">
       <h3>Add A New Book</h3>
       <form className="add-book-form">
