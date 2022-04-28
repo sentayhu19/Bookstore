@@ -1,0 +1,34 @@
+:root {
+  --blue: rgb(37, 46, 224);
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 7%;
+}
+
+.user {
+  align-self: center;
+  margin-right: 10%;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  column-gap: 1%;
+  width: 60%;
+}
+
+.store {
+  color: var(--blue);
+}
+
+a {
+  text-decoration: none;
+}
+
+.user-icn {
+  width: 100px;
+  height: 30px;
+}
