@@ -1,0 +1,11 @@
+:root {
+  --background: rgb(231, 227, 227);
+}
+
+.main {
+  background-color: var(--background);
+}
+
+.remove {
+  margin-left: 7%;
+}
