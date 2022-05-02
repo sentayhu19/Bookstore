@@ -9,8 +9,6 @@ import reducer from '../../redux/configureStore';
 
 const Books = () => {
   const store = createStore(reducer); // creating store from the root reducer
-  console.log('STORE IS', store);
-
   return (
     <>
       <main className="main">
