@@ -1,6 +1,6 @@
 const COMPLETED = bookstore/categories/COMPLETED;
 
-export default reducer = (state={}, action) =>{
+export default categoriesReducer = (state={}, action) =>{
     switch(action.type){
         case COMPLETED:
             return "Under construction";
