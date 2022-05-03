@@ -1,16 +1,16 @@
 /* eslint-disable  no-unused-vars */
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { generate } from 'randomized-string';
 import { alphanumeric } from 'randomized-string/lib/types';
 import Book from './Book';
 import AddBooks from '../Addbooks/AddBooks';
 import './Books.css';
-import booksReducer from '../../redux/books/books';
+import booksReducer, { removeBook } from '../../redux/books/books';
 // import { removeBook } from '../../redux/books/books';
 
 const Books = () => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const Data = useSelector((state) => state.booksReducer);
   return (
     <>
@@ -22,8 +22,13 @@ const Books = () => {
               {...book}
             />
           ))}
-          {/* <button type="button"
-            onClick={() => dispatch(removeBook())} className="remove">Remove</button> */}
+          <button
+            type="button"
+            onClick={() => dispatch(removeBook())}
+            className="remove"
+          >
+            Remove
+          </button>
 
         </section>
         <section className="add-book-section">

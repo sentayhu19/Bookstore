@@ -16,12 +16,12 @@ const booksReducer = (state = initState, action) => {
     case ADDBOOK:
       return {
         ...state,
-        books: [...state.id, ...state.title, ...state.author, action.type],
+        books: [...state.title, ...state.author, action.type],
       };
     case REMOVEBOOK:
       return {
         ...state,
-        books: state.title.filter((books) => books.id !== action.type),
+        books: state.title.filter((books) => books.title !== action.type),
       };
     default:
       return state;
