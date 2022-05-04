@@ -6,7 +6,6 @@ import { removeBook, remove } from '../../redux/books/books';
 const Book = ({ title, author, id }) => {
   const dispatch = useDispatch();
   const removeHandler = () => {
-    console.log('AM remove handler', id);
     dispatch(removeBook(remove(id)));
   };
   if (title !== undefined || author !== undefined) {
@@ -26,14 +25,10 @@ const Book = ({ title, author, id }) => {
   }
   return <span />;
 };
-try {
-  Book.propTypes = {
-    title: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired,
-  };
-} catch (err) {
-  console.log('catched', err);
-}
 
+Book.propTypes = {
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+};
 export default Book;

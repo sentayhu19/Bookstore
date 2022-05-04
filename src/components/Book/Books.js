@@ -9,7 +9,6 @@ import './Books.css';
 
 const Books = () => {
   const Data = useSelector((state) => state.booksReducer);
-  console.log('Data is : ', Data);
   return (
     <>
       <main className="main">

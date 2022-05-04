@@ -15,12 +15,13 @@ const AddBooks = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(addBook(createNewBook(book.title, book.author, book.id)));
+    e.target.reset();
   };
   const handleChange = (e) => {
     const ID = generate({ charset: alphanumeric });
+    e.persist();
     const { id } = e.target;
     const { value } = e.target;
-    e.persist();
     setBook((e) => ({
       ...e,
       id: ID,

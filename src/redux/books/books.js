@@ -5,13 +5,15 @@ const ADDBOOK = 'ADDBOOK';
 const REMOVEBOOK = 'REMOVEBOOK';
 const initState = [{
   id: generate({ charset: alphanumeric }),
-  title: 'the book of boba fet',
-  author: 'JJ',
+  title: 'The book of boba fet',
+  author: 'Lucas',
+  completed: false,
 },
 {
   id: generate({ charset: alphanumeric }),
-  title: 'the mandalorian',
+  title: 'The mandalorian',
   author: 'JJ',
+  completed: false,
 },
 ];
 
@@ -20,18 +22,17 @@ export const createNewBook = (title, author, id) => {
     title,
     author,
     id,
+    completed: false,
   });
 };
 let ID = 0;
 export const remove = (id) => {
   ID = id;
-  console.log('i got id', ID);
 };
 const booksReducer = (state = initState, action) => {
-  console.log('ARRAY DATA: ', initState);
   switch (action.type) {
     case ADDBOOK:
-      return [...state];
+      return [...initState];
 
     case REMOVEBOOK:
       return [...state.filter((book) => book.id !== ID)];
