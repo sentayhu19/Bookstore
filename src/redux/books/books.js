@@ -1,21 +1,6 @@
-import { generate } from 'randomized-string';
-import { alphanumeric } from 'randomized-string/lib/types';
-
 const ADDBOOK = 'ADDBOOK';
 const REMOVEBOOK = 'REMOVEBOOK';
-const initState = [{
-  id: generate({ charset: alphanumeric }),
-  title: 'The book of boba fet',
-  author: 'Lucas',
-  completed: false,
-},
-{
-  id: generate({ charset: alphanumeric }),
-  title: 'The mandalorian',
-  author: 'JJ',
-  completed: false,
-},
-];
+const initState = [];
 
 export const createNewBook = (title, author, id) => {
   initState.push({

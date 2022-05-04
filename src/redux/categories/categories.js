@@ -1,31 +1,15 @@
-const STATUs = 'COMPLETED';
-const categories = [
-  'Action',
-  'Adventure',
-  'Biographies and Autobiographies',
-  'Comic Book or Graphic Novel.',
-  'Cookbooks',
-  'Detective and Mystery',
-  'Economy',
-  'Fantasy',
-  'Historical Fiction',
-  'Horror',
-  'Literary Fiction',
-  'Romance',
-  'Short Stories',
-  'Suspense and Thrillers',
-  'Sciences Fiction',
-  'True Crime',
-];
-const categoriesReducer = (state = categories, action) => {
+const STATUS = 'COMPLETED';
+
+const categoriesReducer = (state = '', action) => {
+  const info = 'Under construction';
   switch (action.type) {
-    case STATUs:
-      return [...state, 'Under construction'];
+    case STATUS:
+      return info;
     default:
       return state;
   }
 };
 export const checkStatus = () => ({
-  type: STATUs,
+  type: STATUS,
 });
 export default categoriesReducer;
