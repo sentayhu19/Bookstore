@@ -1,28 +1,40 @@
+import { generate } from 'randomized-string';
+import { alphanumeric } from 'randomized-string/lib/types';
+
 const ADDBOOK = 'ADDBOOK';
 const REMOVEBOOK = 'REMOVEBOOK';
 const initState = [{
-  id: 1,
+  id: generate({ charset: alphanumeric }),
   title: 'the book of boba fet',
   author: 'JJ',
 },
 {
-  id: 1,
+  id: generate({ charset: alphanumeric }),
   title: 'the mandalorian',
   author: 'JJ',
 },
 ];
+
+export const createNewBook = (title, author, id) => {
+  initState.push({
+    title,
+    author,
+    id,
+  });
+};
+let ID = 0;
+export const remove = (id) => {
+  ID = id;
+  console.log('i got id', ID);
+};
 const booksReducer = (state = initState, action) => {
+  console.log('ARRAY DATA: ', initState);
   switch (action.type) {
     case ADDBOOK:
-      return {
-        ...state,
-        books: [...state.title, ...state.author, action.type],
-      };
+      return [...state];
+
     case REMOVEBOOK:
-      return {
-        ...state,
-        books: state.title.filter((books) => books.title !== action.type),
-      };
+      return [...state.filter((book) => book.id !== ID)];
     default:
       return state;
   }
@@ -34,4 +46,5 @@ export const addBook = () => ({
 export const removeBook = () => ({
   type: REMOVEBOOK,
 });
+
 export default booksReducer;
