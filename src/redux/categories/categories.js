@@ -1,6 +1,11 @@
 const STATUs = 'COMPLETED';
-
-const categoriesReducer = (state = {}, action) => {
+const categories = [
+  'Action',
+  'Adventure',
+  'Economy',
+  'Sciences Fiction',
+];
+const categoriesReducer = (state = categories, action) => {
   switch (action.type) {
     case STATUs:
       return [...state, 'Under construction'];

@@ -13,3 +13,10 @@
 .books-list-section {
   margin-left: 7%;
 }
+
+.book{
+  border: 1px solid black;
+  margin-bottom: 10px;
+  width: 80%;
+}
+

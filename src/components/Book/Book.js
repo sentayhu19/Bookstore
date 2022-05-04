@@ -8,9 +8,9 @@ const Book = ({ title, author, id }) => {
   const removeHandler = () => {
     dispatch(removeBook(remove(id)));
   };
-  if (title !== undefined || author !== undefined) {
-    return (
-      <>
+  return (
+    <>
+      <div className="book">
         <h2 className="title">{title}</h2>
         <p className="author">{author}</p>
         <button
@@ -20,10 +20,9 @@ const Book = ({ title, author, id }) => {
         >
           Remove
         </button>
-      </>
-    );
-  }
-  return <span />;
+      </div>
+    </>
+  );
 };
 
 Book.propTypes = {
