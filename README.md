@@ -26,7 +26,14 @@ The Bookstore is a website to store books that allow users to: Display a list of
 
 #### Cloning the project
 
-git clone https://github.com/sentayhu19/Bookstore <Your-Build-Directory>
+ git clone https://github.com/sentayhu19/Bookstore <Your-Build-Directory>
+`` 
+- cd bookstore
+- npm install # Local dependencies if you want to hack
+- npm install -g # Install globally 
+- npm start
+``
+
 
 ## Available Scripts
 
