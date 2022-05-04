@@ -1,14 +1,15 @@
-const COMPLETED = 'bookstore/categories/COMPLETED';
+const STATUS = 'COMPLETED';
 
-const categoriesReducer = (state = {}, action) => {
+const categoriesReducer = (state = '', action) => {
+  const info = 'Under construction';
   switch (action.type) {
-    case COMPLETED:
-      return 'Under construction';
+    case STATUS:
+      return info;
     default:
       return state;
   }
 };
 export const checkStatus = () => ({
-  type: COMPLETED,
+  type: STATUS,
 });
 export default categoriesReducer;
