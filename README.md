@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 The Bookstore is a website to store books that allow users to: Display a list of books. Add a book. Remove a selected book.
 
-<!-- ![Book store Home page (20)]() COMMING SOON -->
+![BookStore(20)](https://raw.githubusercontent.com/sentayhu19/Bookstore/Bookstore-styling/Screenshot.png)
 
 
 ## Live demo comming soon
