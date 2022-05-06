@@ -14,9 +14,14 @@ const Books = () => {
   useEffect(() => {
     dispatch(getBookApi());
   }, [dispatch]);
-  const { bookStore, err, loadingAnim } = useSelector((state) => state.booksReducer);
+  const {
+    bookStore, err, loadingAnim, error,
+  } = useSelector((state) => state.booksReducer);
   if (loadingAnim === true) {
     return (<div><img src="https://i.pinimg.com/originals/f6/06/cb/f606cbf26c0a18898b96ef6857953a75.gif" className="loading" alt="loading" /></div>);
+  }
+  if (error === true) {
+    return (<div className="error">Error While trying to fetch, Try refreshing the page</div>);
   }
 
   return (

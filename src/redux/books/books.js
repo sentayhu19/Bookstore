@@ -1,9 +1,11 @@
 const ADDBOOK = 'ADDBOOK';
 const REMOVEBOOK = 'REMOVEBOOK';
 const FETCHBOOK = 'FETCHBOOK';
+const FETCHERROR = 'FETCHERROR';
 const initState = {
   bookStore: [],
   loadingAnim: true,
+  error: false,
 };
 export const createNewBook = (title, author, id) => ({
   id,
@@ -24,6 +26,10 @@ const booksReducer = (state = initState, action) => {
       return {
         book: state.book.filter((b) => b.item_id !== action.payload),
       };
+    case FETCHERROR:
+      return {
+        error: true,
+      };
     default:
       return state;
   }
@@ -40,5 +46,7 @@ export const removeBook = (bookItems) => ({
 export const fetchBook = () => ({
   type: FETCHBOOK,
 });
-
+export const fetchError = () => ({
+  type: FETCHERROR,
+});
 export default booksReducer;
