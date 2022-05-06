@@ -1,36 +1,44 @@
 const ADDBOOK = 'ADDBOOK';
 const REMOVEBOOK = 'REMOVEBOOK';
-const initState = [];
-
-export const createNewBook = (title, author, id) => {
-  initState.push({
-    title,
-    author,
-    id,
-    completed: false,
-  });
+const FETCHBOOK = 'FETCHBOOK';
+const initState = {
+  bookStore: [],
+  loadingAnim: true,
 };
-let ID = 0;
-export const remove = (id) => {
-  ID = id;
-};
+export const createNewBook = (title, author, id) => ({
+  id,
+  title,
+  categories: 'action',
+  author,
+});
 const booksReducer = (state = initState, action) => {
   switch (action.type) {
+    case FETCHBOOK:
+      return [...state];
     case ADDBOOK:
-      return [...initState];
-
+      return {
+        bookStore: action.payload,
+        loadingAnim: false,
+      };
     case REMOVEBOOK:
-      return [...state.filter((book) => book.id !== ID)];
+      return {
+        book: state.book.filter((b) => b.item_id !== action.payload),
+      };
     default:
       return state;
   }
 };
 
-export const addBook = () => ({
+export const addBook = (bookItems) => ({
   type: ADDBOOK,
+  payload: bookItems,
 });
-export const removeBook = () => ({
+export const removeBook = (bookItems) => ({
   type: REMOVEBOOK,
+  payload: bookItems,
+});
+export const fetchBook = () => ({
+  type: FETCHBOOK,
 });
 
 export default booksReducer;

@@ -19,3 +19,10 @@
   margin-bottom: 10px;
   width: 80%;
 }
+
+.loading{
+  padding-left: 30%;
+  width: 500px;
+  height: 400px;
+  padding-top: 6%;
+}

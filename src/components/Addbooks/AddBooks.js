@@ -3,7 +3,8 @@ import './AddBooks.css';
 import { useDispatch } from 'react-redux';
 import { generate } from 'randomized-string';
 import { alphanumeric } from 'randomized-string/lib/types';
-import { addBook, createNewBook } from '../../redux/books/books';
+import { createNewBook } from '../../redux/books/books';
+import { addBookApi } from '../../redux/books/apiActions';
 
 const AddBooks = () => {
   const [book, setBook] = useState({
@@ -14,7 +15,7 @@ const AddBooks = () => {
   const dispatch = useDispatch();
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addBook(createNewBook(book.title, book.author, book.id)));
+    dispatch(addBookApi(createNewBook(book.title, book.author, book.id)));
     e.target.reset();
   };
   const handleChange = (e) => {
