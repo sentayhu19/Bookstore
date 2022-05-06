@@ -1,6 +1,7 @@
 :root {
   --button-bg: rgb(90, 97, 238);
   --btnTextColor: rgb(245, 232, 232);
+  --grey-border: #e8e8e8;
 }
 
 .form-wrap {
@@ -10,15 +11,33 @@
 .add-book-form {
   display: flex;
   column-gap: 1%;
+  width: 88%;
 }
 
 .Addbook-btn {
-  background-color: var(--button-bg);
   color: var(--btnTextColor);
-  width: 90px;
+  width: 8.938rem;
+  height: 1.125rem;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 0.813rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
 }
 
 .hline {
-  margin-left: 10%;
-  margin-right: 10%;
+  border: solid 1px var(--grey-border);
+  margin-left: 7.8%;
+  margin-right: 11.7%;
+}
+
+.title {
+  width: 52%;
+}
+
+.author {
+  width: 39%;
 }

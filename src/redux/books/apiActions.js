@@ -28,7 +28,7 @@ export const addBookApi = (book) => (dispatch) => {
       item_id: book.id,
       title: book.title,
       author: book.author,
-      category: 'abc',
+      category: 'Action',
     },
   }).catch(() => {
     dispatch(fetchError());

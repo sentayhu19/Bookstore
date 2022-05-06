@@ -12,10 +12,10 @@ const heading = () => (
           <h2 className="store">BookStore CMS</h2>
         </Link>
         <Link to="/Books" className="books">
-          <p>Books</p>
+          <p className="bookstxt">BOOKS</p>
         </Link>
         <Link to="/Categories" className="categories">
-          <p>Categories</p>
+          <p className="categoriestxt">CATEGORIES</p>
         </Link>
       </div>
       <div className="user">
