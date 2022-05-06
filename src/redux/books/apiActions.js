@@ -7,13 +7,10 @@ const baseUrl = axios.create({ baseURL: `${url}/${appId}` });
 export const getBookApi = () => (dispatch) => {
   baseUrl.get('/books').then((res) => {
     dispatch(addBook(res.data));
-  }).catch(() => {
-    console.log('am err catcher');
   });
 };
 
 export const removeBookApi = (ID) => (dispatch) => {
-  console.log('am remove ap i got id : ', ID);
   baseUrl.delete(`/books/${ID}`, { item_id: ID }).then(() => {
     dispatch(getBookApi());
   });
@@ -29,8 +26,6 @@ export const addBookApi = (book) => (dispatch) => {
       author: book.author,
       category: 'abc',
     },
-  }).catch((err) => {
-    console.log('am err catcher', err);
   });
   dispatch(getBookApi());
 };
