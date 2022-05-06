@@ -19,3 +19,20 @@
   margin-bottom: 10px;
   width: 80%;
 }
+
+.loading {
+  padding-left: 30%;
+  width: 500px;
+  height: 400px;
+  padding-top: 6%;
+}
+
+.error {
+  background-color: red;
+  color: white;
+  width: 40%;
+  margin: auto;
+  margin-top: 12%;
+  text-align: center;
+  height: 60px;
+}
