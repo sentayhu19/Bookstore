@@ -7,7 +7,7 @@ The Bookstore is a website to store books that allow users to: Display a list of
 ![BookStore(20)](https://raw.githubusercontent.com/sentayhu19/Bookstore/Bookstore-styling/Screenshot.png)
 
 
-## Live demo comming soon
+## Live demo
 
 [Live Demo Link on Netlify](https://serene-zabaione-53a1d6.netlify.app/)
 
