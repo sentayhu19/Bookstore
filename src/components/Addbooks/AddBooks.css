@@ -5,20 +5,20 @@
 }
 
 .form-wrap {
-  margin-left: 13%;
+  margin-left: 7%;
 }
 
 .add-book-form {
   display: flex;
   column-gap: 1%;
+  width: 88%;
 }
 
 .Addbook-btn {
   color: var(--btnTextColor);
-  width: 20%;
   width: 8.938rem;
   height: 1.125rem;
-  font-family: RobotoSlab;
+  font-family: 'RobotoSlab', sans-serif;
   font-size: 0.813rem;
   font-weight: bold;
   font-stretch: normal;
@@ -30,13 +30,14 @@
 
 .hline {
   border: solid 1px var(--grey-border);
-  margin-left: 13.5%;
-  margin-right: 6%;
+  margin-left: 7.8%;
+  margin-right: 11.7%;
 }
+
 .title {
-  width: 50%;
+  width: 52%;
 }
 
 .author {
-  width: 26%;
+  width: 39%;
 }
