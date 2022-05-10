@@ -1,12 +1,14 @@
 .Check-status {
-text-align: center;
-margin: 4% 20%;
+  text-align: center;
+  margin: 4% 20%;
 }
-.message{
+
+.message {
   text-align: center;
 }
-.under-cons-img{
-width: 70%;
-height: 40%;
-margin: auto;
+
+.under-cons-img {
+  width: 70%;
+  height: 40%;
+  margin: auto;
 }
