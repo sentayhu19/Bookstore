@@ -216,3 +216,71 @@ body {
   letter-spacing: normal;
   color: var(--black-two);
 }
+
+@media only screen and (max-width: 768px) {
+  .book-panel {
+    margin: auto;
+    flex-direction: column;
+    height: auto;
+    gap: 30px;
+    width: 65%;
+    padding: 5% 1px;
+    margin-top: 5%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav {
+    flex-direction: column;
+    flex: 1;
+    height: auto;
+    align-items: baseline;
+  }
+
+  .add-book-form {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .title {
+    width: 63%;
+    align-self: center;
+  }
+
+  .author {
+    width: 63%;
+    align-self: center;
+  }
+
+  #add-book-btn {
+    margin: auto;
+  }
+
+  .Current-Chapter,
+  .Current-Lesson {
+    text-align: center;
+  }
+
+  #title-mob {
+    width: 95%;
+    text-align: center;
+  }
+
+  #store-mob {
+    margin-left: 30%;
+    font-size: 20px;
+  }
+
+  .hline {
+    width: 30%;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 35%;
+  }
+
+  .loading {
+    margin: auto;
+    width: 100%;
+    padding-left: 3%;
+  }
+}

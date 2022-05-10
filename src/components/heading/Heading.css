@@ -75,3 +75,10 @@ a {
   letter-spacing: 1.9px;
   color: var(--black);
 }
+
+@media only screen and (max-width: 768px) {
+  #categories {
+    margin: 1px 10px;
+    color: black;
+  }
+}

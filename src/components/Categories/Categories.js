@@ -13,7 +13,7 @@ const Categories = () => {
   return (
     <>
       <button className="Check-status" onClick={handleStatus} type="button">Check status</button>
-      <h2>{status}</h2>
+      <h2 className="message">{status}</h2>
     </>
   );
 };
