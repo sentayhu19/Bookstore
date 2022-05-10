@@ -33,7 +33,7 @@ const AddBooks = () => {
     <>
       <hr className="hline" />
       <div className="form-wrap">
-        <h3 className="title-1">Add A New Book</h3>
+        <h3 className="title-1" id="title-mob">Add A New Book</h3>
         <form className="add-book-form" onSubmit={handleSubmit}>
           <input
             id="title"
@@ -57,6 +57,7 @@ const AddBooks = () => {
           />
           <button
             className="Addbook-btn Rectangle-2"
+            id="add-book-btn"
             type="submit"
           >
             Add Book
